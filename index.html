@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday Aisha ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="hearts"></div>
+<div id="welcomeScreen">
+    <div class="welcomeBox">
+        <h1>🎁 A Birthday Surprise</h1>
+
+        <p>Made with ❤️<br>Just for Aisha</p>
+
+        <button onclick="openGift()">
+            Open Your Gift ✨
+        </button>
+    </div>
+</div>
+<div id="website" style="display:none;">
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+<div class="card">
+
+
+<p>To my bubu...</p>
+<h1>Happy Birthday heesha❤️</h1>
+<p>A special surprise made just for you ✨</p>
+<div id="countdown">
+
+    <div class="time-box">
+        <span id="days">00</span>
+        <small>Days</small>
+    </div>
+
+    <div class="time-box">
+        <span id="hours">00</span>
+        <small>Hours</small>
+    </div>
+
+    <div class="time-box">
+        <span id="minutes">00</span>
+        <small>Minutes</small>
+    </div>
+
+    <div class="time-box">
+        <span id="seconds">00</span>
+        <small>Seconds</small>
+    </div>
+
+</div>
+
+<div id="birthdayMessage" style="display:none;">
+    <h1>🎉 Happy 17th Birthday Aisha! ❤️</h1>
+    <p>Today is all about you. I love you so much! 💖✨</p>
+</div>
+
+<div id="birthdayContent" style="display:none;">
+
+<div class="message fade">
+    <h2>For My Special Person ❤️</h2>
+    <p>
+        I hope your birthday is filled with happiness, love, and beautiful moments ✨
+    </p>
+</div>
+<div class="photos fade">
+    <h2>My Princess ❤️</h2>
+
+<img id="gallery" src="aisha1.jpg" alt="My Princess" onclick="openImage(this.src)">
+
+<p id="compliment">
+    The most beautiful girl in my world. ❤️
+</p>
+
+<p id="counter">1 / 8</p>
+
+<br>
+
+<button onclick="previousPhoto()">⬅ Previous</button>
+<button onclick="nextPhoto()">Next ➡</button>
+</div>
+
+
+<div class="letter fade">
+    <h2>💌 A Letter To My Princess 💌</h2>
+
+    <p id="letter"></p>
+
+    <button onclick="startLetter()">
+        Read My Letter ❤️
+    </button>
+</div>
+<div class="video-section fade">
+    <h2>🎥 Our Memory ❤️</h2>
+
+    <p>
+        We may only have one video together right now,
+        but to me it's one of our most precious memories.
+        I can't wait for the day we have so many more that
+        we'll lose count. ❤️
+    </p>
+
+    <video controls width="100%" id="ourVideo">
+    <source src="ourvideo.mp4" type="video/mp4">
+    Your browser does not support videos.
+</video>
+
+</div>
+
+<div class="ending fade">
+
+    <h2>❤️ One Last Thing... ❤️</h2>
+
+    <p>
+        Thank you for taking this journey with me.<br><br>
+
+        If you've reached this point, it means you've seen every memory, every picture, every word I wrote from my heart.<br><br>
+
+        I hope this birthday is one you'll always remember. I hope every time you think about today, you smile... because this was all made with love, just for you.<br><br>
+
+        Happy 17th Birthday once again, my potential future wife. ❤️
+    </p>
+
+    <h3>Forever Yours,</h3>
+
+    <h2>Your Ode 😂❤️</h2>
+
+</div>
+</div>
+</div>
+
+<div id="imageViewer" onclick="closeImage()">
+    <span>&times;</span>
+    <img id="fullImage" src="" alt="Photo">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+function openGift() {
+    document.getElementById("welcomeScreen").style.display = "none";
+    document.getElementById("website").style.display = "block";
+
+    document.getElementById("bgMusic").play();
+
+    confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 }
+    });
+}
+</script>
+
+<button id="topBtn" onclick="scrollToTop()">⬆️</button>
+
+</body>
+</html>
